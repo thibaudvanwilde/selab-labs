@@ -132,9 +132,9 @@ Voor System Engineering Lab heb je volgende applicaties nodig:
 - VirtualBox: laat toe om zgn. virtuele computers aan te maken, op te starten en te installeren met een besturingssysteem
 - MySQL Workbench
 
-:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.0._en geen versie 7.1._
+:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.2.2
 
-Vervolgens moet je er ook voor zorgen dat je bij een volgende update geen 7.1-versie van VirtualBox installeert. Dit _pinnen_, _freezen_ of _holden_ van een bepaald pakket kan je in elke package manager op een verschillende manier. Met welk commando doe jij dit?
+Vervolgens moet je er ook voor zorgen dat je bij een volgende update geen nieuwe minor versie van VirtualBox installeert. Dit _pinnen_, _freezen_ of _holden_ van een bepaald pakket kan je in elke package manager op een verschillende manier. Met welk commando doe jij dit?
 
 Je kan zelf het installatiescript onderverdelen in "rubrieken", bv. software die je voor verschillende vakken nodig hebt kunnen onder de lijn die "Installatie algemene applicaties" op de console afdrukt. Software die je nodig hebt voor een specifiek vak kan je onder een aparte hoofding plaatsen, bv.
 
@@ -234,7 +234,7 @@ Voor System Engineering Lab heb je bovendien nog volgende applicaties nodig:
 
 Voeg deze applicaties ook toe aan je script.
 
-:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.0.20 op een Intel Mac en versie 7.1.\* op een Silicon Mac.
+:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.2.2
 
 Vervolgens moet je er ook voor zorgen dat Homebrew bij een volgende update geen (te) nieuwe minor versie van VirtualBox installeert. Je kan dit doen door in Homebrew bepaalde versies van een pakket te _pinnen_. Met welk commando doe je dit?
 
@@ -349,13 +349,13 @@ Voor System Engineering Lab heb je bovendien nog volgende applicaties nodig:
 - VirtualBox: laat toe om virtuele machines aan te maken, op te starten en te installeren met een besturingssysteem
 - MySQL Workbench
 
-:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.0.20. Gebruik hiervoor het volgende commando:
+:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.2.2 Gebruik hiervoor het volgende commando:
 
 ```console
-winget install -e --id Oracle.VirtualBox --version 7.0.20
+winget install -e --id Oracle.VirtualBox --version 7.2.2
 ```
 
-Vervolgens moet je er ook voor zorgen dat WinGet bij een volgende update geen 7.1-versie van VirtualBox installeert. Je kan dit doen door in WinGet bepaalde versies van een pakket te _pinnen_. Met welk commando doe je dit?
+Vervolgens moet je er ook voor zorgen dat WinGet bij een volgende update geen nieuwe minor versie van VirtualBox installeert. Je kan dit doen door in WinGet bepaalde versies van een pakket te _pinnen_. Met welk commando doe je dit?
 
 Je kan zelf het installatiescript onderverdelen in _rubrieken_, bv. software die je voor verschillende vakken nodig hebt kunnen onder de lijn die "Installatie algemene applicaties" op de console afdrukt. Software die je nodig hebt voor een specifiek opleidingsonderdeel kan je onder een aparte hoofding plaatsen, bv.
 
