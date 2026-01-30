@@ -40,10 +40,12 @@ Beschrijf hier hoe je elk evaluatiecriterium zal demonstreren. Geef ook aan welk
 
 ## Reflecties
 
+Maak werk van een degelijke reflectie over de opdracht.
+
 Wat was moeilijk? Wat was eenvoudig? Wat hebben jullie geleerd van de opdracht? Wat zouden jullie anders doen als jullie het opnieuw moesten doen?
 
 Als jullie nog andere opmerkingen hebben over de opdracht hebben, voel je vrij om ze te delen.
 
 ## Bronnen
 
-Maak een lijst van alle bronnen die jullie hebben gebruikt tijdens het uitvoeren van de opdracht: boeken, handleidingen, HOWTO's, blog posts, enz.
+Maak een lijst van alle bronnen die jullie hebben gebruikt tijdens het uitvoeren van de opdracht: boeken, handleidingen, HOWTO's, blog posts, enz. Citeer geen bronnen zoals ChatGPT of andere AI-tools rechtstreeks. Als je AI hebt gebruikt, laat het je dan leiden naar echte, betrouwbare bronnen in plaats daarvan.
