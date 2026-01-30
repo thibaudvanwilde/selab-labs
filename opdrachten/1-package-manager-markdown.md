@@ -17,9 +17,11 @@ Toon na afwerken het resultaat aan je begeleider. Elk teamlid moet in staat zijn
 - [ ] Je toont inzicht in de werking van een package manager en kan deze vlot kan gebruiken om basistaken uit te voeren.
 - [ ] Je hebt een verslag gemaakt op basis van het template.
 - [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
+- [ ] Je hebt GitHub correct geconfigureerd op je toestel en je hebt de basiscommando's (via CLI) in je vingers.
 - [ ] Je kan een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
 
 > Opmerking voor studenten TIAO: elk teamlid toont **individueel alle** evaluatiecriteria. Individuele extra's worden individueel toegelicht.
+> Studenten dagonderwijs zullen tijdens de demo van labo 2 moeten aantonen dat ze kunnen werken met GitHub vanuit de CLI. Voor studenten TIAO gebeurt dit tijdens de eerste ingeplande meeting.
 
 ## :question: Probleemstelling
 
@@ -132,7 +134,7 @@ Voor System Engineering Lab heb je volgende applicaties nodig:
 - VirtualBox: laat toe om zgn. virtuele computers aan te maken, op te starten en te installeren met een besturingssysteem
 - MySQL Workbench
 
-:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.2.2
+:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.2.6
 
 Vervolgens moet je er ook voor zorgen dat je bij een volgende update geen nieuwe minor versie van VirtualBox installeert. Dit _pinnen_, _freezen_ of _holden_ van een bepaald pakket kan je in elke package manager op een verschillende manier. Met welk commando doe jij dit?
 
@@ -234,7 +236,7 @@ Voor System Engineering Lab heb je bovendien nog volgende applicaties nodig:
 
 Voeg deze applicaties ook toe aan je script.
 
-:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.2.2
+:warning: Let op! Om problemen te vermijden installeer je van VirtualBox best dezelfde versie als binnen het OLOD Operating Systems, namelijk versie 7.2.6
 
 Vervolgens moet je er ook voor zorgen dat Homebrew bij een volgende update geen (te) nieuwe minor versie van VirtualBox installeert. Je kan dit doen door in Homebrew bepaalde versies van een pakket te _pinnen_. Met welk commando doe je dit?
 
