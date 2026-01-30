@@ -15,14 +15,14 @@ In deze opdracht maak je kennis met de mogelijkheden binnen de Microsoft Azure c
 Toon na het afronden het resultaat aan je begeleider. Elk teamlid moet in staat zijn om het resultaat te demonstreren bij de oplevering van deze opdracht! Criteria voor beoordeling:
 
 - [ ] Je kan de aangemaakte resources tonen in de Azure omgeving.
-- [ ] Het lukt om een SSH-verbinding op te zetten met de applicatieserver.
-- [ ] Het lukt om aan te melden op MySQL op de databankserver vanaf de applicatieserver.
+- [ ] Je kan een SSH-verbinding opzetten met de applicatieserver.
+- [ ] Je kan via de de applicatieserver aanmelden op de MySQL databankserver.
 - [ ] Je kan met HTTPS surfen naar jouw WordPress blog.
 - [ ] Je kan aanmelden en het WordPress dashboard tonen.
 - [ ] Je kan een nieuw bericht posten op jouw WordPress blog.
-- [ ] Je hebt een verslag gemaakt op basis van het template.
-- [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
-- [ ] Je kan een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Er is een verslag gemaakt op basis van het template.
+- [ ] Willekeurige teamleden kunnen een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
 
 > Opmerking voor studenten TIAO: elk teamlid toont een deel van de evaluatiecriteria. Individuele extra's worden individueel toegelicht.
 
@@ -262,11 +262,9 @@ In de stappen 2 en 3 hebben we de benodigde machines opgezet: een Ubuntu applica
 Maak een SSH-verbinding met je applicatieserver (zoals eerder uitgeprobeerd). Ga naar <https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview> en volg de tutorial om WordPress te installeren. Zorg ervoor dat je begrijpt wat elke stap en elk commando doet en waarom dit nodig is. In de praktijk kan een tutorial niet altijd 1-op-1 gevolgd worden, dus het is belangrijk om te weten wat er gebeurt. Houd rekening met de volgende zaken:
 
 - **2. Install dependencies**
-
   - Laat bij de `apt install` instructie `mysql-server` weg, aangezien we al een aparte databankserver hebben opgezet.
 
 - **4. Configure Apache for WordPress**
-
   - 💡 **Tip:** gebruik een teksteditor (bv. `nano` of `vim`) om het bestand `wordpress.conf` aan te maken en de configuratie in te plakken.
   - Het gebruik van `sudo` kan nodig zijn. Gebruik het echter niet zomaar overal, alleen waar nodig.
   - De configuratie van de hostname mag je overslaan.
@@ -276,7 +274,6 @@ Maak een SSH-verbinding met je applicatieserver (zoals eerder uitgeprobeerd). Ga
     **:question: Wat is het verschil tussen beide? Waarom kiezen we voor `systemctl`?**
 
 - **5. Configure database**
-
   - Vergeet niet dat de MySQL databank niet op deze applicatieserver draait. Zie eerder hoe je een verbinding maakt met de databank vanaf de applicatieserver! Ook het laatste commando om MySQL op te starten is niet van toepassing.
   - Kies een wachtwoord (bewaar dit in de overzichtstabel). In plaats van localhost gebruik je `'%'` zodat aanmelden lukt vanaf elke host en niet alleen lokaal. Voer de volgende commando's achtereenvolgens uit:
 
@@ -289,7 +286,6 @@ Maak een SSH-verbinding met je applicatieserver (zoals eerder uitgeprobeerd). Ga
   ```
 
 - **6. Configure WordPress to connect to the database**
-
   - Vergeet niet om het wachtwoord uit stap 5 te gebruiken.
   - Je hoeft de `sed` commando's niet te gebruiken. Je kan ook met een teksteditor de nodige aanpassingen doen in het configuratiebestand, zoals bijvoorbeeld:
 
@@ -298,19 +294,16 @@ Maak een SSH-verbinding met je applicatieserver (zoals eerder uitgeprobeerd). Ga
   ```
 
   **:question: Wat is de betekenis van `sudo -u www-data` in dit commando?**
-
   - Bij het openen van het configuratiebestand ga je naast de opgegeven instructies ook zoeken naar de regel voor `DB_HOST`. Voer nu uiteraard de DNS-naam van de databankserver in plaats van `localhost` in! (Herinnering: bepaalde gegevens zijn terug te vinden op de overzichtspagina's van de machines in Azure.)
 
   ![Database hostname](./img/wordpress/22-wordpress-db-host.png)
 
 - **7. Configure WordPress**
-
   - Het is nu tijd om WordPress te configureren.
   - Surf hiervoor naar de DNS-naam van jouw applicatieserver (in plaats van `localhost`).
   - Helaas krijgen we een foutmelding die aangeeft dat een verbinding met de database niet lukt.
 
   ![Error establishing connection to database](./img/wordpress/23-wordpress-error-connection-db.png)
-
   - _Optioneel:_ Indien je de foutmelding in detail wil zien, dan kan je de `WP_DEBUG` optie in het configuratiebestand van WordPress activeren. Dit doe je door in `/srv/www/wordpress/wp-config.php` de variabele `WP_DEBUG` op `true` te zetten:
 
   ```shell
@@ -326,7 +319,6 @@ Maak een SSH-verbinding met je applicatieserver (zoals eerder uitgeprobeerd). Ga
   - Voeg `define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);` toe aan het bestand, tussen `/* Add any custom values between this line and the "stop editing" line. */` en `/* That's all, stop editing! Happy publishing. */` en bewaar het bestand.
 
   ![MySQL SSL](./img/wordpress/24-wordpress-mysql-ssl.png)
-
   - Probeer opnieuw te surfen naar de WordPress applicatie. Als alles goed is verlopen, kan je nu WordPress configureren. Volg de instructies en houd je gebruikersnaam en wachtwoord voor je blog goed bij. Let's go!
 
   - Jouw mooie blog is nu klaar en je kan na het inloggen meteen een eerste bericht plaatsen!
