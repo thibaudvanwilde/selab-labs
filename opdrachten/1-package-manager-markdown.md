@@ -43,7 +43,7 @@ Hieronder vind je de instructies voor de meest gangbare besturingssystemen: **Wi
 
 Noteer ook je bevindingen tijdens het doorlopen van deze opdracht. Deze zal je moeten neerschrijven in een **verslag**. Dit verslag zal je maken in **Markdown**, wat besproken wordt op het einde van de opdracht.
 
-> :bulb: **Belangrijk:** Voor deze opdracht is het de bedoeling dat elke student een eigen verslag maakt. Voor de volgende opdrachten volstaan één verslag per groep, maar houdt elke student belangrijke commando's individueel bij in de cheat sheet.
+> :bulb: **Belangrijk:** Voor deze opdracht is het de bedoeling dat elke student een eigen verslag maakt. Voor de volgende opdrachten volstaat één verslag per groep, maar houdt elke student belangrijke commando's individueel bij in de cheat sheet.
 
 ## :memo: Opdracht
 
