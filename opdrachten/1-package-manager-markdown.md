@@ -33,7 +33,7 @@ Linux-gebruikers hebben dit soort problemen niet. Je kan de meeste applicaties d
 
 Je kan een package manager vergelijken met een App Store, alhoewel het concept op Linux al veel langer bestaat. Je zoekt de applicatie die je wil installeren uit een lijst van duizenden beschikbare **packages** en kan ze installeren met een druk op een knop. Ook het bijwerken van applicaties tot de laatste versie wordt door een package manager gedaan. Je kan een lijst opvragen van alle geïnstalleerde applicaties waarvoor een nieuwe versie beschikbaar is, en die allemaal in één keer bijwerken.
 
-In deze opdracht zal je leren werken met een package manager. Daarna ga je deze kennis toepassen om de installatie van applicaties te automatiseren a.h.v. een **script**. Deze scripts worden doorgaans uitgevoerd in een terminal. Zo'n terminal lijkt op het eerste gezicht misschien een verouderde manier om van een computer iets gedaan te krijgen in vergelijking met een mooie grafische applicatie, maar de terminal en zijn Command Line Interface (CLI) zijn echter de sleutel tot automatisering en zijn essentieel bij het beheren van computersystemen op grote schaal aan de hand van scripting.
+In deze opdracht zal je leren werken met een package manager. Daarna ga je deze kennis toepassen om de installatie van applicaties te automatiseren aan de hand van een **script**. Deze scripts worden doorgaans uitgevoerd in een terminal. Zo'n terminal lijkt op het eerste gezicht misschien een verouderde manier om van een computer iets gedaan te krijgen in vergelijking met een mooie grafische applicatie, maar de terminal en zijn Command Line Interface (CLI) zijn echter de sleutel tot automatisering en zijn essentieel bij het beheren van computersystemen op grote schaal aan de hand van scripting.
 
 _Wat zijn scripts?_
 
@@ -42,6 +42,8 @@ _Wat zijn scripts?_
 Hieronder vind je de instructies voor de meest gangbare besturingssystemen: **Windows**, **macOS** en **Linux**. Volg de instructies voor het besturingssysteem dat op jouw laptop geïnstalleerd is. Windows-gebruikers moeten dus bijvoorbeeld niet de instructies voor Linux volgen of omgekeerd, maar het is wel nuttig de instructies voor alle platformen eens door te nemen.
 
 Noteer ook je bevindingen tijdens het doorlopen van deze opdracht. Deze zal je moeten neerschrijven in een **verslag**. Dit verslag zal je maken in **Markdown**, wat besproken wordt op het einde van de opdracht.
+
+> :bulb: **Belangrijk:** Voor deze opdracht is het de bedoeling dat elke student een eigen verslag maakt. Voor de volgende opdrachten volstaan één verslag per groep, maar houdt elke student belangrijke commando's individueel bij in de cheat sheet.
 
 ## :memo: Opdracht
 
