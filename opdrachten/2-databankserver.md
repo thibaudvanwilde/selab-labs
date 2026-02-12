@@ -133,6 +133,8 @@ Om de databankserver te configureren, voer je de volgende stappen uit in de virt
   sudo apt install -y mysql-server
   ```
 
+> **Opgelet:** Probeer tijdens deze labo's een `sudo apt upgrade` te vermijden. Aangezien deze virtuele schijf van osboxes al meer dan een jaar geleden gemaakt werd, zouden er honderden packages geüpgraded moeten worden. Dit kost tijd en ruimte en is voor deze labo's niet nodig.
+
 - Controleer of de service draait:
 
   ```bash

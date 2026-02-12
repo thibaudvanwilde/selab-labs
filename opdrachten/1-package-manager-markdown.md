@@ -57,7 +57,7 @@ Het is jammer genoeg niet eenvoudig om eenduidige instructies voor Linux-gebruik
 
 #### Een script schrijven
 
-Elk Linux-systeem is uitgerust met een krachtige Command Line Interface (CLI), genaamd **Bash**. Er is ook een grote keuze aan applicaties om tekst te bewerken. In deze opdracht gebruiken we de standaard teksteditor, **GEdit**, om een script te schrijven dat de installatie van software die je nodig hebt te automatiseren. Je kan uiteraard ook een andere teksteditor kiezen.
+Elk Linux-systeem is uitgerust met een krachtige Command Line Interface (CLI), genaamd **Bash**. Er is ook een grote keuze aan applicaties om tekst te bewerken. In deze opdracht gebruiken we de standaard teksteditor om een script te schrijven dat de installatie van software die je nodig hebt te automatiseren. Je kan uiteraard ook een andere teksteditor kiezen.
 
 1. Druk op de Windows-toets of klik bovenaan op **Activities** en tik **Edit**. Klik in de lijst met resultaten op **Text Editor** of druk ENTER als het icoontje geselecteerd is.
 

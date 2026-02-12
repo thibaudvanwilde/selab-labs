@@ -42,14 +42,14 @@ Het opzetten van een webserver is een van de basisvaardigheden van een systeembe
 
 ### Stap 1 - Installatie
 
-> **Tip:** Het is verstandig om een snapshot van je VM te maken (de VM met de databaseserver) voordat je aan deze procedure begint. Als er iets misgaat met je VM, kan je altijd terugkeren naar een vorige snapshot.
+> **Tip:** Het is verstandig om een snapshot van je VM te maken (de VM met de databaseserver) voordat je aan deze procedure begint. Als er iets misgaat met je VM, kan je altijd terugkeren naar een vorige snapshot. Dit kan je makkelijk doen in het rechtervenster in de GUI van VirtualBox, in het tabblad *Snapshots* wanneer je jouw VM selecteert. Vergeet niet een passende naam en/of beschrijving toe te voegen.
 
 Voer de volgende stappen uit:
 
 - Installeer de Apache2 HTTP Server op de VM.
 - Controleer of de Apache service draait en welke netwerkpoorten in gebruik zijn:
   - :question: Luistert de Apache netwerkservice alleen naar de loopback-interface zoals MySQL? Of is de service meteen ook van buitenaf toegankelijk? Hoe controleer je dit?
-  - :question: Zal de Apache service opstarten (enabled) bij het opstarten van de VM? Hoe controleer je dit?
+  - :question: Zal de Apache service opstarten (status: enabled) bij het opstarten van de VM? Hoe controleer je dit?
 - Controleer _binnen je VM_ of je de standaardwebsite kan zien die op de VM draait:
   - Open een webbrowser en surf naar <http://localhost>, <http://127.0.0.1>, of het host-only IP-adres van je VM (normaal `192.168.56.20`).
   - Lees de informatie op deze website grondig!
@@ -60,7 +60,7 @@ Voer de volgende stappen uit:
 
 ### Stap 2 - Een statische website publiceren
 
-In deze stap gaan we een statische website van je fysieke systeem kopiëren naar de VM en ervoor zorgen dat die zichtbaar is in onze webbrowser. Zorg dat je op je fysieke systeem een webpagina of website hebt (bijvoorbeeld uit de OLOD's Web Development) die je kan publiceren op de VM.
+In deze stap kopiëren we een statische website van je fysieke systeem naar de VM en zorgen ervoor dat die zichtbaar is in onze webbrowser. Zorg dat je op je fysieke systeem een webpagina of website hebt (bijvoorbeeld uit de OLOD's Web Development) die je kan publiceren op de VM.
 
 Een Linux-systeem is typisch beveiligd zodat je niet zomaar bestanden naar de Document Root kan kopiëren. We geven hier de nodige commando's, waarvan er een aantal reeds aan bod zijn gekomen in het vak Computer Systems. Later in de opleiding leer je meer in detail wat deze precies doen.
 
@@ -76,15 +76,15 @@ Vervolgens maak je de Document Root eigendom van de groep **www-data**:
 sudo chgrp -R www-data /pad/naar/document/root
 ```
 
-> **Opgelet**: `/pad/naar/document/root` moet je uiteraard vervangen door het pad naar de Document Root op jouw systeem.
+> **Opgelet**: `/pad/naar/document/root` moet je uiteraard vervangen door het pad naar de Document Root op jouw VM.
 
-Tenslotte ken je alle leden van de groep **www-data** schrijfrechten toe op de Document Root:
+Ten slotte ken je alle leden van de groep **www-data** schrijfrechten toe op de Document Root:
 
 ```shell
 sudo chmod -R g+w /pad/naar/document/root
 ```
 
-Om bestanden te kopiëren naar de VM ga je een SSH-server installeren. Mogelijks heb je dit al gedaan in de vorige opdracht. Zo niet, installeer dan OpenSSH met het commando:
+Om bestanden te kopiëren naar de VM ga je een SSH-server installeren. Mogelijks heb je dit al gedaan in de vorige opdracht. Zoniet, installeer dan OpenSSH met het commando:
 
 ```bash
 sudo apt install openssh-server
@@ -94,7 +94,7 @@ sudo apt install openssh-server
 
 Gebruik `systemctl` om de SSH-server op te starten en te activeren indien dit nog niet het geval is.
 
-Op je fysieke systeem open je nu FileZilla of WinSCP (of een vergelijkbare applicatie zoals Cyberduck). Maak een verbinding met de VM. Hier volgen de instructies voor WinSCP, pas dit zelf aan voor jouw gekozen applicatie:
+Op je fysieke systeem open je nu WinSCP, FileZilla of een vergelijkbare applicatie zoals Cyberduck. Maak verbinding met de VM en zet de websitebestanden over. Hier volgen de instructies voor WinSCP, pas dit zelf aan voor jouw gekozen applicatie:
 
 - Protocol: `SFTP`
 - Host name: `192.168.56.20`
@@ -108,19 +108,20 @@ Op je fysieke systeem open je nu FileZilla of WinSCP (of een vergelijkbare appli
 
 Controleer tenslotte dat de website zichtbaar is in de webbrowser op het fysieke systeem.
 
-> **Pro Tip**: Je kan ook het commando **scp** (_secure copy_) gebruiken om bestanden te kopiëren tussen je host en je VM. Dit kan je uiteraard scripten, wat niet kan met WinSCP en andere grafische applicaties.
+> **Pro Tip**: Je kan ook het commando **scp** (*secure copy*) gebruiken om bestanden te kopiëren tussen je host en je VM. Dit kan je uiteraard scripten, wat niet kan met WinSCP of andere grafische applicaties.
 
 ### Stap 3 - Een webserver beveiligen met SSL
 
-In productieomgevingen is het belangrijk dat een publiek toegankelijke webserver voldoende beveiligd is. In een testomgeving zoals onze VM is dat minder van belang, maar we willen toch dat jullie ervan bewust zijn welke minimale beveiligingsinstellingen nodig zijn. We zullen daarom verschillende acties uitvoeren om een basisbeveiliging op onze webserver aan te bieden.
+In productieomgevingen is het belangrijk dat een publiek toegankelijke webserver voldoende beveiligd is. In een testomgeving zoals onze VM is dat minder van belang, maar we willen toch dat jullie weten welke minimale beveiligingsinstellingen nodig zijn. We zullen daarom verschillende acties uitvoeren om een basisbeveiliging op onze webserver aan te bieden.
 
 Activeer de **ssl** module voor Apache, zodat clients kunnen verbinden met SSL/TLS:
 
 ```bash
 sudo a2enmod ssl
 sudo a2ensite default-ssl
-sudo systemctl reload apache2
 ```
+
+Lees de uitvoer van deze commando's grondig zodat je weet met welk commando je de wijzigingen ook effectief activeert binnen Apache.
 
 In de adresbalk van je webbrowser laat je de URL naar de website nu voorafgaan door `https://` in plaats van `http://`. Dit versleutelt de informatie die tussen de webbrowser en de webserver uitgewisseld wordt. Test dit uit, zowel binnen je VM, als vanaf je fysieke systeem.
 
@@ -134,21 +135,22 @@ In deze stap ga je een firewall instellen die enkel verkeer doorlaat naar de net
 
 De firewall in Linux draait op kernelniveau, waar het packet filtering systeem **netfilter** heet. Traditioneel gebruikte men de **iptables** commando's om netfilter te configureren, maar **ufw** biedt een eenvoudigere interface.
 
-Een firewall gaat dus netwerkpakketten filteren nog voor ze ooit de applicatie bereiken. Een applicatie kan een TCP/IP poort open hebben staan, terwijl de netfilter geconfigureerd is om pakketten naar deze poort te laten vallen. Op die manier is de service onbereikbaar. Omgekeerd kan ook: de netfilter laat de pakketten door, terwijl de applicatie niet op de juiste poort en/of interface luistert. Wanneer "het niet werkt" moet je dus zowel controleren dat de firewall de pakketten doorlaat, als controleren dat de service op de juiste poort luistert, en misschien best ook even kijken of de service nog steeds draait.
+Een firewall gaat netwerkpakketten filteren nog voor ze ooit de applicatie bereiken. Een applicatie kan een TCP/IP poort open hebben staan, terwijl de netfilter geconfigureerd is om pakketten naar deze poort te laten vallen. Op die manier is de service onbereikbaar. Omgekeerd kan ook: de netfilter laat pakketten door, terwijl de applicatie niet op de juiste poort en/of interface luistert. Wanneer "het niet werkt" moet je dus zowel controleren dat de firewall de pakketten doorlaat, als controleren dat de service op de juiste poort luistert, en misschien best ook even kijken of de service nog steeds draait.
 
 Voer deze stappen uit:
 
 1. Bepaal welke netwerkpoorten gebruikt worden voor resp. SSH, HTTP, HTTPS en MySQL.
 2. Zoek op hoe je via het commando **ufw** de firewall kan activeren en activeer deze.
-3. Zorg ervoor dat het verkeer op de poorten uit stap 1 door de firewall toegelaten wordt.
-4. Test of alle netwerkdiensten nog bereikbaar zijn vanop je fysieke systeem.
-5. :question: Met welk commando kan je de status van de firewall met een overzicht van alle toegelaten poorten opvragen?
+3. Controleer dat je webpagina niet meer bereikbaar is vanop je fysiek systeem.
+4. Zorg ervoor dat het verkeer op de poorten uit stap 1 door de firewall toegelaten wordt.
+5. Test of alle netwerkdiensten terug bereikbaar zijn vanop je fysieke systeem.
+6. :question: Met welk commando kan je de status van de firewall met een overzicht van alle toegelaten poorten opvragen?
 
 > **Opmerking**: Vaak merken we dat studenten die een firewall instellen zeggen dat ze een bepaalde poort "open gezet" hebben. We willen erop wijzen dat deze terminologie eigenlijk niet klopt. Een "open poort" betekent dat er een service actief is en luistert op een bepaalde poort. Als je een firewall instelt, dan laat je verkeer toe naar die poort. Beide staan los van elkaar. Je kan in je firewall-instellingen verkeer doorlaten naar een gesloten poort (omdat de service niet draait). Let op de correcte terminologie en verwar beide begrippen niet!
 
 ### Stap 5 - Een webserver beveiligen met fail2ban
 
-Elke server op het internet loopt voortdurend risico om aangevallen te worden. Een vaak voorkomende aanval is een **brute force attack**: een programma probeert alle mogelijke combinaties van letters, cijfers en andere tekens om het wachtwoord van een account te raden. Deze programma's worden ook wel bots genoemd en proberen in te loggen als `root`, `admin` of andere vaak voorkomende accounts. Om dit te voorkomen gaan we **fail2ban** installeren en configureren.
+Elke server die verbonden is met het internet loopt voortdurend risico om aangevallen te worden. Een vaak voorkomende aanval is een **brute force attack**: een programma probeert alle mogelijke combinaties van letters, cijfers en andere tekens om het wachtwoord van een account te raden. Deze programma's worden ook wel bots genoemd en proberen in te loggen als `root`, `admin` of andere vaak voorkomende accounts. Om dit te voorkomen gaan we **fail2ban** installeren en configureren.
 
 Fail2ban detecteert mislukte inlogpogingen op verschillende soorten services. Wanneer er vanuit een bepaald IP-adres te veel foutieve aanmeldpogingen gebeuren, herkent fail2ban dit als een aanval en wordt dit IP-adres voor een bepaalde tijd geblokkeerd. In deze opdracht gaan we fail2ban gebruiken om onze SSH-toegang te bewaken.
 
@@ -160,7 +162,7 @@ Fail2ban detecteert mislukte inlogpogingen op verschillende soorten services. Wa
 
 #### Configuratie van een jail
 
-- Kopieer het bestand **/etc/fail2ban/jail.conf** naar **/etc/fail2ban/jail.local**. In dit **jail.local** bestand plaatsen we alle instellingen voor onze **jails**. Jails zijn verzamelingen van alle IP-adressen die we blokkeren.
+- Kopieer het bestand **/etc/fail2ban/jail.conf** naar een nieuw bestand **/etc/fail2ban/jail.local**. In dit **jail.local** bestand plaatsen we alle instellingen voor onze **jails**. Jails zijn verzamelingen van alle IP-adressen die we blokkeren.
 
 - Verwijder de inhoud van dit bestand en begin met de volgende eenvoudige configuratie:
 
@@ -179,7 +181,7 @@ Fail2ban detecteert mislukte inlogpogingen op verschillende soorten services. Wa
 
   Deze informatie is terug te vinden in een man-pagina. Zoek deze.
 
-- Configureer fail2ban zodat het een IP-adres blokkeert bij 6 foutieve aanmeldpogingen via SSH, binnen een tijdspanne van 3 minuten. Het IP-adres wordt dan voor 15 minuten geblokkeerd.
+- Configureer fail2ban zodat het een IP-adres blokkeert bij 3 foutieve aanmeldpogingen via SSH, binnen een tijdspanne van 3 minuten. Het IP-adres wordt dan voor 15 minuten geblokkeerd.
 
 - Herstart fail2ban om de nieuwe instellingen te activeren.
 
