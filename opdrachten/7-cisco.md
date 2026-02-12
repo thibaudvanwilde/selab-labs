@@ -134,14 +134,14 @@ Is de versie lager dan 15? Bekijk dan de onderstaande video's om te leren hoe je
 
 Duidt in de volgende tabel aan met `ja` of `nee` of je kan pingen tussen de toestellen:
 
-| **Van/naar** | **PC1** | **PC2** | **R1 (G0/0/0)** | **R2 (G0/0/1)** |**PC3**  | **PC4** |
-| ------------ | ------- | ------- | --------------- | --------------- | ------- | ------- |
-| PC1          | n.v.t.  |         |                 |                 |         |         |
-| PC2          |         | n.v.t.  |                 |                 |         |         |
-| R1           |         |         |                 |                 |         |         |
-| R2           |         |         |                 |                 |         |         |
-| PC3          |         |         |                 |                 | n.v.t.  |         |
-| PC4          |         |         |                 |                 |         | n.v.t.  |
+| **Van/naar** | **PC1** | **PC2** | **R1** | **R2** |**PC3**  | **PC4** |
+| ------------ | ------- | ------- | ------ | ------ | ------- | ------- |
+| PC1          | n.v.t.  |         |        |        |         |         |
+| PC2          |         | n.v.t.  |        |        |         |         |
+| R1           |         |         |  n.v.t |        |         |         |
+| R2           |         |         |        |  n.v.t |         |         |
+| PC3          |         |         |        |        | n.v.t.  |         |
+| PC4          |         |         |        |        |         | n.v.t.  |
 
 - :question: Waarvoor dient de gateway of last resort in de routeringstabel van een router?
 - :question: Waarom geeft de eerste ping soms een `Request timed out` foutmelding terwijl de volgende drie wel lukken?
@@ -248,8 +248,8 @@ Duidt in de volgende tabel aan met `ja` of `nee` of je kan pingen tussen de toes
 | ------------ | ------- | ------- |-----  | ------ |------- | ------- |
 | PC1          | n.v.t.  |         |       |        |        |         |
 | PC2          |         | n.v.t.  |       |        |        |         |
-| R1           |         |         |       |        |        |         |
-| R2           |         |         |       |        |        |         |
+| R1           |         |         | n.v.t |        |        |         |
+| R2           |         |         |       | n.v.t. |        |         |
 | PC3          |         |         |       |        |n.v.t.  |         |
 | PC4          |         |         |       |        |        | n.v.t.  |
 
