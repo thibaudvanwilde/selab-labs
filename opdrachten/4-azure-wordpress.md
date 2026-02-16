@@ -21,7 +21,7 @@ Toon na het afronden het resultaat aan je begeleider. Elk teamlid moet in staat 
 - [ ] Je kan aanmelden en het WordPress dashboard tonen.
 - [ ] Je kan een nieuw bericht posten op jouw WordPress blog.
 - [ ] Er is een verslag gemaakt op basis van het template.
-- [ ] Willekeurige teamleden kunnen een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
 - [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
 
 > Opmerking voor studenten TIAO: elk teamlid toont een deel van de evaluatiecriteria. Individuele extra's worden individueel toegelicht.

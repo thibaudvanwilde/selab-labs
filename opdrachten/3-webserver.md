@@ -19,7 +19,7 @@ Toon na het afronden het resultaat aan je begeleider. Elk teamlid moet in staat 
 - [ ] Je kan de VM opstarten.
 - [ ] Je kan met WinSCP/Cyberduck (of een vergelijkbare applicatie) bestanden naar de Document Root van de webserver kopiëren.
 - [ ] De website is te zien in een webbrowser op het fysieke systeem via URL <https://192.168.56.20>.
-- [ ] Je kan aantonen dat de firewall actief is en dat de juiste poorten zijn toegestaan in de firewall:
+- [ ] Je kan aantonen dat de firewall actief is en dat de juiste poorten zijn toegelaten in de firewall:
   - [ ] Je kan aantonen dat je nog steeds kan verbinden via SSH of SFTP.
   - [ ] Je kan aantonen dat de MySQL Workbench nog steeds kan verbinden met de VM.
   - [ ] Je kan aantonen dat je website nog steeds bereikbaar is.
@@ -28,9 +28,9 @@ Toon na het afronden het resultaat aan je begeleider. Elk teamlid moet in staat 
 - [ ] Je kan met de **fail2ban** command line client aantonen dat de **findtime**, **maxretry** en **bantime** juist zijn ingesteld. Je kan deze begrippen toelichten.
 - [ ] Je kan aantonen dat je via SSH kan inloggen op de VM vanaf jouw fysieke toestel en dat fail2ban jouw IP-adres blokkeert als je te veel foutieve inlogpogingen doet.
 - [ ] Je kan aantonen dat een IP-adres op de whitelist niet wordt geblokkeerd.
-- [ ] Je hebt een verslag gemaakt op basis van het template.
-- [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
-- [ ] Je kan een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Er is een verslag gemaakt op basis van het template.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [ ] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
 
 > Opmerking voor studenten TIAO: elk teamlid toont een deel van de evaluatiecriteria. Individuele extra's worden individueel toegelicht.
 
@@ -50,7 +50,7 @@ Voer de volgende stappen uit:
 - Controleer of de Apache service draait en welke netwerkpoorten in gebruik zijn:
   - :question: Luistert de Apache netwerkservice alleen naar de loopback-interface zoals MySQL? Of is de service meteen ook van buitenaf toegankelijk? Hoe controleer je dit?
   - :question: Zal de Apache service opstarten (status: enabled) bij het opstarten van de VM? Hoe controleer je dit?
-- Controleer _binnen je VM_ of je de standaardwebsite kan zien die op de VM draait:
+- Controleer *binnen je VM* of je de standaardwebsite kan zien die op de VM draait:
   - Open een webbrowser en surf naar <http://localhost>, <http://127.0.0.1>, of het host-only IP-adres van je VM (normaal `192.168.56.20`).
   - Lees de informatie op deze website grondig!
 - Controleer of je de standaardwebsite kan zien vanaf je fysieke hostsysteem:

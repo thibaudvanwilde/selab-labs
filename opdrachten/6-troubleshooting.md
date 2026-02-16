@@ -25,9 +25,9 @@ Toon na het afronden het resultaat aan je begeleider. Elk teamlid moet in staat 
     - [ ] Portainer is bereikbaar op <https://192.168.56.20:9443> (`admin troubleshoot`).
     - [ ] Minetest is bereikbaar op <https://192.168.56.20:30000> (`trouble shoot`).
     - [ ] Planka is bereikbaar op <http://192.168.56.20:3000> (`[trouble OF troubleshoot@selab.hogent.be] shoot`).
-- [ ] Je hebt een verslag gemaakt op basis van de template.
+- [ ] Er is een verslag gemaakt op basis van de template.
   - [ ] Het verslag bevat een duidelijke beschrijving van de gevonden problemen en de oplossingen. **Per type machine is er een aparte beschrijving!**
-- [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
 
 > Opmerking voor studenten TIAO: elk teamlid toont **individueel alle** evaluatiecriteria met de eigen VM. Individuele extra's worden individueel toegelicht.
 

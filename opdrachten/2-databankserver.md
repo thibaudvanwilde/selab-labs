@@ -20,9 +20,9 @@ Toon na het afronden het resultaat aan je begeleider. Elk teamlid moet in staat 
 - [ ] Je kan MySQL Workbench gebruiken om een connectie te maken met de databankserver:
   - [ ] Je hebt een **werkende** connectie voor de admin-gebruiker.
   - [ ] Je hebt een **werkende** connectie voor de applicatie-gebruiker.
-- [ ] Je hebt een verslag gemaakt op basis van het template.
-- [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
-- [ ] Je kan een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Er is een verslag gemaakt op basis van het template.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [ ] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
 
 > Opmerking voor studenten TIAO: elk teamlid toont een deel van de evaluatiecriteria. Individuele extra's worden individueel toegelicht.
 

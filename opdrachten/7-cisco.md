@@ -28,9 +28,9 @@ Toon na afwerken het resultaat aan je begeleider. Elk teamlid moet in staat zijn
   - [ ] De startup config is weggeschreven.
   - [ ] Je kan via IPv4 pingen naar elke PC.
 - [ ] Je kan vanuit PC1 een SSH-verbinding openen naar R1 en R2 via IPv4.
-- [ ] Je hebt een verslag gemaakt op basis van de template.
-- [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
-- [ ] Je kan een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Er is een verslag gemaakt op basis van de template.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [ ] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
 
 > Opmerking voor studenten TIAO: elk teamlid toont een deel van de evaluatiecriteria, eventueel op een ander toestel.
 
@@ -44,7 +44,7 @@ Een bedrijf of organisatie kan tegenwoordig niet meer functioneren zonder een ne
 
 ### Stap 1 - Topologie
 
-- Zorg ervoor dat je de laatste versie van Packet Tracer geïnstalleerd hebt (https://www.netacad.com/resources/lab-downloads?courseLang=en-US).
+- Zorg ervoor dat je de laatste versie van Packet Tracer geïnstalleerd hebt (<https://www.netacad.com/resources/lab-downloads?courseLang=en-US>).
 - Bouw in Packet Tracer een netwerk zoals op bovenstaand schema.
 
   - Dit netwerk heeft **drie subnetten**:
@@ -79,7 +79,7 @@ Is de versie lager dan 15? Bekijk dan de onderstaande video's om te leren hoe je
   - Voorkom ongewenste DNS lookups.
   - Stel wachtwoorden in voor de priviliged EXEC mode en de toegang via de consolepoort.
   - Zorg ervoor dat wachtwoorden geëncrypteerd zijn in de configuratie.
-  - Stel de volgende MOTD (= Message Of The Day) banner in: `Toegang enkel voor leden van groep ... (vul hier je eigen groepsnummer in) `.
+  - Stel de volgende MOTD (= Message Of The Day) banner in: `Toegang enkel voor leden van groep ... (vul hier je eigen groepsnummer in)`.
 
 - Bewaar de configuratie zodat deze niet verloren raakt bij een `reload` en test dit uit.
 - :question: Hoe toon je de huidige configuratie?
@@ -225,8 +225,8 @@ Router(config)#ipv6 unicast-routing
 
 #### Stap 5.3 - Configureer de router
 
-* Stel voor elke interface van de router het correcte LLA- en GUA-adres in.
-* Stel een statische route in zodat de PC's uit subnet 0 ook de PC's uit subnet 2 kunnen bereiken. 
+- Stel voor elke interface van de router het correcte LLA- en GUA-adres in.
+- Stel een statische route in zodat de PC's uit subnet 0 ook de PC's uit subnet 2 kunnen bereiken.
 
 #### Stap 5.4 - Configureer de PC's
 
@@ -277,8 +277,8 @@ Configureer de router als volgt:
 
 | **Van/naar** |       **R1**   | **R2**          |
 |---|---|---
-| PC1          |                |                 | 
-| PC3          |                |                 | 
+| PC1          |                |                 |
+| PC3          |                |                 |
 
 - :question:Werkt SSH ook met IPv6?
   - Tip: voer een `reload` uit op R1 en R2 alvorens dit te testen

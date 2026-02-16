@@ -28,9 +28,9 @@ Toon na afwerken het resultaat aan je begeleider. Elk teamlid moet in staat zijn
   - [ ] Je kan surfen naar en inloggen op deze container op het fysieke systeem (bv. via <http://192.168.56.20>).
   - [ ] Portainer en Vaultwarden worden op het Portainer dashboard weergegeven met als status "Running".
 - [ ] Er is slechts één container per image aanwezig op de VM.
-- [ ] Je hebt een verslag gemaakt op basis van het template.
-- [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
-- [ ] Je kan een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Er is een verslag gemaakt op basis van het template.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
+- [ ] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
 
 > Opmerking voor studenten TIAO: elk teamlid toont een deel van de evaluatiecriteria. Individuele extra's worden individueel toegelicht.
 
@@ -141,7 +141,7 @@ Gebruik terug een self-signed certificate om HTTPS op te zetten. Normaal voorzie
 openssl req -x509 -nodes -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
 ```
 
-3. Stop en verwijder de Vaultwarden container. Start deze opnieuw op met volgende aanpasingen aan het commando
+1. Stop en verwijder de Vaultwarden container. Start deze opnieuw op met volgende aanpasingen aan het commando
 
    - Voeg de optie `-e ROCKET_TLS={certs=/ssl/cert.pem,key=/ssl/key.pem}` toe aan het `docker run` commando
 

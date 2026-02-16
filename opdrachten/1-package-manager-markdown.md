@@ -15,10 +15,10 @@ Toon na afwerken het resultaat aan je begeleider. Elk teamlid moet in staat zijn
 - [ ] Je hebt een package manager voor jouw besturingssysteem geïnstalleerd.
 - [ ] Je hebt een script (PowerShell of Bash, afhankelijk van je besturingssysteem) geschreven en gebruikt om de opgesomde applicaties te installeren.
 - [ ] Je toont inzicht in de werking van een package manager en kan deze vlot kan gebruiken om basistaken uit te voeren.
-- [ ] Je hebt een verslag gemaakt op basis van het template.
-- [ ] De cheat sheet is aangevuld met nuttige commando's die je wil onthouden.
+- [ ] Er is een verslag gemaakt op basis van het template.
+- [ ] Elk teamlid heeft de eigen cheat sheet aangevuld met nuttige commando's uit deze opdracht.
 - [ ] Je hebt GitHub correct geconfigureerd op je toestel en je hebt de basiscommando's (via CLI) in je vingers.
-- [ ] Je kan een correct antwoord geven op de vragen die zijn aangeduid met een :question:.
+- [ ] Er is een correct antwoord gegeven op de vragen die zijn aangeduid met een :question:.
 
 > Opmerking voor studenten TIAO: elk teamlid toont **individueel alle** evaluatiecriteria. Individuele extra's worden individueel toegelicht.
 > Studenten dagonderwijs zullen tijdens de demo van labo 2 moeten aantonen dat ze kunnen werken met GitHub vanuit de CLI. Voor studenten TIAO gebeurt dit tijdens de eerste ingeplande meeting.
@@ -70,7 +70,7 @@ Elk Linux-systeem is uitgerust met een krachtige Command Line Interface (CLI), g
 
 ![Eerste script](./img/package-manager/linux/eerste-script.png)
 
-4. Ga in het terminalvenster met het commando **cd** naar de directory waar je het script hebt opgeslagen. Controleer met het commando **ls** dat het script zich wel degelijk in deze directory bevindt. Voer het commando `chmod +x installatie.sh` uit. Dit zorgt ervoor dat het script uitvoerbaar wordt. Voer het script uit met `./installatie.sh` en controleer dat het resultaat overeenkomt onderstaande afbeelding.
+1. Ga in het terminalvenster met het commando **cd** naar de directory waar je het script hebt opgeslagen. Controleer met het commando **ls** dat het script zich wel degelijk in deze directory bevindt. Voer het commando `chmod +x installatie.sh` uit. Dit zorgt ervoor dat het script uitvoerbaar wordt. Voer het script uit met `./installatie.sh` en controleer dat het resultaat overeenkomt onderstaande afbeelding.
 
    ![Uitvoer script](./img/package-manager/linux/uitvoer-script.png)
 
