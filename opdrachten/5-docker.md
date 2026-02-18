@@ -42,7 +42,7 @@ Docker kan eenvoudig gebruikt worden door het `docker` commando te gebruiken. Di
 
 ## :memo: Opdracht
 
-## Stap 0 - Voorbereiding
+### Stap 0 - Voorbereiding
 
 Alvorens je start met deze opdracht is het belangrijk om te begrijpen wat Docker en Docker Compose zijn. Hieronder vind je een aantal links die je kunnen helpen om deze concepten te begrijpen:
 
@@ -125,6 +125,8 @@ Installeer Vaultwarden volgens de instructies op <https://github.com/dani-garcia
 
 - Vergeet niet om de firewall te configureren op de VM.
 - Gebruik de map `~/.files-vaultwarden/data` voor het Docker volume in plaats van de map `/vw-data/` .
+- De publish optie (`-p`) mag je aanpassen zodat het adres `0.0.0.0` is (bv. `-p 0.0.0.0:8000:80`) of je kan het adres weglaten (bv. `-p 8000:80`), beide zijn correct.
+- De `--env DOMAIN="https://vw.domain.tld"` environment variabele is niet nodig voor deze opstelling.
 
 Je kan al eens kijken of je Vaultwarden kan bereiken op <http://192.168.56.20> vanop jouw fysiek toestel.
 
@@ -143,13 +145,13 @@ openssl req -x509 -nodes -newkey rsa:4096 -keyout key.pem -out cert.pem -days 36
 
 1. Stop en verwijder de Vaultwarden container. Start deze opnieuw op met volgende aanpasingen aan het commando
 
-   - Voeg de optie `-e ROCKET_TLS={certs=/ssl/cert.pem,key=/ssl/key.pem}` toe aan het `docker run` commando
+   - Voeg de optie `-e ROCKET_TLS="{certs=/ssl/cert.pem,key=/ssl/key.pem}"` toe aan het `docker run` commando. De aanhalingstekens rond de accolades zijn noodzakelijk.
 
    :question: Waar bevinden de paden uit deze environment variabele zich? Is dit op de host of in de container?
 
    - Voeg een volume toe om de certificaten te mounten in de container: `-v ~/.files-vaultwarden/certs:/ssl`.
 
-Als dit werkt, kan je Vaultwarden bereiken op <https://192.168.56.20> (letop de "s" in "http**s**"). Maak jouw account aan op jouw Vaultwarden applicatie.
+Als dit werkt, kan je Vaultwarden bereiken op <https://192.168.56.20> (let op de "s" in "http**s**"). Maak jouw account aan op jouw Vaultwarden applicatie.
 
 :bulb: **Tip:** voeg de credentials toe in de beschrijving van de VM.
 
@@ -208,7 +210,7 @@ services:
       - ~/.files-vaultwarden:/data
 ```
 
-Dit bestand komt overeen met onderstaand Docker commando waarbij je Vaultwarden kan bereiken op poort `4123`. Merk op: je mag geen `~` gebruiken in het pad van een volume in het `docker run` commando. Je moet hier een absoluut pad gebruiken. In het `docker-compose.yml` bestand kan je wel gebruik maken van `~` om naar jouw home directory te verwijzen.
+Dit bestand komt overeen met onderstaand Docker commando waarbij je Vaultwarden kan bereiken op poort `4123`. 
 
 ```console
 docker run --name vaultwarden -v "${HOME}/.files-vaultwarden:/data/" -p 4123:80 vaultwarden/server:latest
