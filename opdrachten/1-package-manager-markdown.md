@@ -70,7 +70,7 @@ Elk Linux-systeem is uitgerust met een krachtige Command Line Interface (CLI), g
 
 ![Eerste script](./img/package-manager/linux/eerste-script.png)
 
-1. Ga in het terminalvenster met het commando **cd** naar de directory waar je het script hebt opgeslagen. Controleer met het commando **ls** dat het script zich wel degelijk in deze directory bevindt. Voer het commando `chmod +x installatie.sh` uit. Dit zorgt ervoor dat het script uitvoerbaar wordt. Voer het script uit met `./installatie.sh` en controleer dat het resultaat overeenkomt onderstaande afbeelding.
+4. Ga in het terminalvenster met het commando **cd** naar de directory waar je het script hebt opgeslagen. Controleer met het commando **ls** dat het script zich wel degelijk in deze directory bevindt. Voer het commando `chmod +x installatie.sh` uit. Dit zorgt ervoor dat het script uitvoerbaar wordt. Voer het script uit met `./installatie.sh` en controleer dat het resultaat overeenkomt onderstaande afbeelding.
 
    ![Uitvoer script](./img/package-manager/linux/uitvoer-script.png)
 
