@@ -34,7 +34,7 @@ Een mogelijke oplossing is om deze software in een virtuele machine te installer
 
 ## :memo: Opdracht
 
-> **Opmerking:** studenten die gebruik maken van een Mac met Apple Silicon kunnen deze opdracht niet uitvoeren, omdat VirtualBox nog geen stabiele ondersteuning biedt voor deze architectuur. In dat geval kan je inspiratie halen uit [opdracht 2 van Operating Systems](https://hogenttin.github.io/operating-systems/h2/2-create-vm-in-utm/). Hierbij zal je via de documentatie van UTM een vergelijkbare virtuele machine moeten opzetten (stap 1 en 2). Vanaf stap 3 kan je de instructies van deze opdracht volgen, aangezien deze niet afhankelijk zijn van het virtualisatieplatform.
+> **Opmerking:** Studenten diegebruik maken van een Mac met Apple Silicon kunnen deze opdracht niet uitvoeren, omdat VirtualBox nog geen stabiele ondersteuning biedt voor deze architectuur. In dat geval kan je inspiratie halen uit [opdracht 2 van Operating Systems](https://hogenttin.github.io/operating-systems/h2/2-create-vm-in-utm/). Hierbij zal je via de documentatie van UTM een vergelijkbare virtuele machine moeten opzetten (stap 1 en 2). Vanaf stap 3 kan je de instructies van deze opdracht volgen, aangezien deze niet afhankelijk zijn van het virtualisatieplatform.
 
 ### Stap 1 - VirtualBox configureren
 
